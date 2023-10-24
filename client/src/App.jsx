@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   HomeLayout,
-  Landing,
   Register,
   Login,
   DashboardLayout,
@@ -36,15 +35,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Landing />,
+        element: <Login />,
       },
       {
         path: "register",
         element: <Register />,
-      },
-      {
-        path: "login",
-        element: <Login />,
       },
       {
         path: "dashboard",

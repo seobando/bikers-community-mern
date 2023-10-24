@@ -1,14 +1,21 @@
-import { IoBarChartSharp } from 'react-icons/io5';
-import { MdQueryStats } from 'react-icons/md';
-import { MdPedalBike } from "react-icons/md";
-import { ImProfile } from 'react-icons/im';
-import { MdAdminPanelSettings } from 'react-icons/md';
+import { ImLocation2, ImProfile, ImBook } from "react-icons/im";
+import {
+  MdQueryStats,
+  MdPedalBike,
+  MdAdminPanelSettings,
+} from "react-icons/md";
+
 
 const links = [
   {
     text: "add bike",
-    path: ".",
+    path: "add-bike",
     icon: <MdPedalBike />,
+  },
+  {
+    text: "Book bike",
+    path: "book-bike",
+    icon: <ImBook />,
   },
   {
     text: "all bikes",
@@ -16,9 +23,9 @@ const links = [
     icon: <MdQueryStats />,
   },
   {
-    text: "stats",
-    path: "stats",
-    icon: <IoBarChartSharp />,
+    text: "Locations",
+    path: "locations",
+    icon: <ImLocation2 />,
   },
   {
     text: "profile",

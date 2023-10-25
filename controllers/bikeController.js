@@ -1,8 +1,14 @@
 import Bike from "../models/BikeModel.js";
 import { StatusCodes } from "http-status-codes";
+import { nanoid } from "nanoid";
+
+let bikes = [
+  { id: nanoid(), company: "apple", position: "front-end" },
+  { id: nanoid(), company: "google", position: "back-end" },
+];
 
 export const getAllBikes = async (req, res) => {
-  const bikes = await Bike.find({});
+  //const bikes = await Bike.find({});
   res.status(StatusCodes.OK).json({ bikes });
 };
 

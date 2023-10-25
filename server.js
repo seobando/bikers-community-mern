@@ -9,6 +9,7 @@ import mongoose from 'mongoose';
 
 //routers
 import bikeRouter from './routes/bikeRouter.js';
+import userRouter from "./routes/userRouter.js";
 
 // middleware
 import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
@@ -30,6 +31,9 @@ app.post("/", (req, res) => {
 
 // HANDLE Bikes
 app.use('/api/v1/bikes',bikeRouter);
+
+// HANDLE Users
+app.use('/api/v1/users',userRouter);
 
 // NOT FOUND MIDDLEWARE
 app.use("*", (req, res) => {

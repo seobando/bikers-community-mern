@@ -1,6 +1,6 @@
 import Wrapper from '../assets/wrappers/UserInfo';
 
-const BikeInfo = ({ icon, text }) => {
+const UserInfo = ({ icon, text }) => {
   return (
     <Wrapper>
       <span className='user-icon'>{icon}</span>
@@ -8,4 +8,4 @@ const BikeInfo = ({ icon, text }) => {
     </Wrapper>
   );
 };
-export default BikeInfo;
+export default UserInfo;

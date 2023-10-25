@@ -12,3 +12,5 @@ export { default as Loading } from './Loading';
 export { default as BikesContainer } from "./BikesContainer";
 export { default as SearchContainer } from "./SearchContainer";
 export { default as Bike } from "./Bike";
+export { deafault as User } from "./User";
+export { deafault as UserContainer } from "./UserContainer";

@@ -16,7 +16,7 @@ const UsersContainer = () => {
     <Wrapper>
       <div className="users">
         {users.map((user) => {
-          return <Bike key={user._id} {...user} />;
+          return <User key={user._id} {...user} />;
         })}
       </div>
     </Wrapper>

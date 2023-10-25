@@ -11,6 +11,8 @@ import {
   Admin,
   Stats,
   EditBike,
+  Locations,
+  BookBike,
 } from "./pages";
 
 import { action as addBikeAction } from "./pages/AddBike";
@@ -60,12 +62,22 @@ const router = createBrowserRouter([
             loader: allBikesLoader,
           },
           {
+            path: "locations",
+            element: <Locations />,
+          },
+          {
             path: "profile",
             element: <Profile />,
           },
           {
             path: "admin",
             element: <Admin />,
+          },
+          {
+            path: "book-bike/:id",
+            element: <BookBike />,
+            loader: editBikeLoader,
+            action: editBikeAction,
           },
           {
             path: "edit-bike/:id",

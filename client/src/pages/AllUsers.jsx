@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import { BikesContainer, SearchContainer } from "../components";
+import { UsersContainer, SearchContainer } from "../components";
 import customFetch from "../utils/customFetch";
 import { useLoaderData } from "react-router-dom";
 import { useContext, createContext } from "react";
@@ -14,18 +14,18 @@ export const loader = async () => {
   }
 };
 
-const AllBikesContext = createContext();
+const AllUserContext = createContext();
 
 const AllBikes = () => {
   const { data } = useLoaderData();
   return (
-    <AllBikesContext.Provider value={{ data }}>
+    <AllUserContext.Provider value={{ data }}>
       <SearchContainer />
-      <BikesContainer />
-    </AllBikesContext.Provider>
+      <UsersContainer />
+    </AllUserContext.Provider>
   );
 };
 
-export const useAllBikesContext = () => useContext(AllBikesContext);
+export const useAllUsersContext = () => useContext(AllUserContext);
 
 export default AllBikes;

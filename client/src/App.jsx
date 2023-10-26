@@ -80,6 +80,11 @@ const router = createBrowserRouter([
             action: editBikeAction,
           },
           {
+            path: "add-bike",
+            element: <AddBike />,
+            action: addBikeAction,
+          },
+          {
             path: "edit-bike/:id",
             element: <EditBike />,
             loader: editBikeLoader,
